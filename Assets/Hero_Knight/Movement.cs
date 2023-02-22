@@ -11,7 +11,8 @@ public class Movement : MonoBehaviour
     private Rigidbody2D player;
     private bool canJump = true;
     private float direction = 0f;
-    private bool running = false;
+    private bool running;
+    private bool jumping;
 
     void Start() {
         player = GetComponent<Rigidbody2D>();
@@ -37,14 +38,18 @@ public class Movement : MonoBehaviour
 
         if (player.velocity.y == 0) {
             canJump = true;
+            jumping = false;
+        } else {
+            running = false;
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && canJump) {
             player.velocity = new Vector2(player.velocity.x, jumpSpeed);
             canJump = false;
-            running = false;
+            jumping = true;
         }
 
         animator.SetBool("running", running);
+        animator.SetBool("jumping", jumping);
     }
 }
