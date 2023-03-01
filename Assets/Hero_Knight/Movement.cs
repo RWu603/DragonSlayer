@@ -13,6 +13,7 @@ public class Movement : MonoBehaviour
     private float direction = 0f;
     private bool running;
     private bool jumping;
+	private bool attacking;
 
     void Start() {
         player = GetComponent<Rigidbody2D>();
@@ -20,6 +21,7 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		attacking = false;
         direction = Input.GetAxis("Horizontal");
         if (direction > 0f) {
             running = true;
@@ -48,8 +50,14 @@ public class Movement : MonoBehaviour
             canJump = false;
             jumping = true;
         }
+		
+		if (Input.GetKey(KeyCode.M) && !attacking) {
+			Debug.Log("attacking");
+			attacking = true;
+		}
 
         animator.SetBool("running", running);
         animator.SetBool("jumping", jumping);
+		animator.SetBool("attacking", attacking);
     }
 }
