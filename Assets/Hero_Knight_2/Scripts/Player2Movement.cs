@@ -8,6 +8,8 @@ public class Player2Movement : MonoBehaviour
     public float jumpSpeed = 7;
     public Animator animator;
 
+    public Player2Attack p2Attack;
+
     private Rigidbody2D player;
     private bool canJump = true;
     private float direction = 0f;
@@ -53,6 +55,7 @@ public class Player2Movement : MonoBehaviour
 
         animator.SetBool("jumping", jumping);
         animator.SetBool("running", running);
+        animator.SetBool("attacking", p2Attack.attackingAnim);
     
     }
 }
