@@ -58,4 +58,18 @@ public class Player2Movement : MonoBehaviour
         animator.SetBool("attacking", p2Attack.attackingAnim);
     
     }
+
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Ground") {
+            player.gravityScale = 0f;
+            player.velocity = new Vector2(0f,0f);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col) {
+        
+        if (col.gameObject.tag == "Ground") {
+            player.gravityScale = 1f;
+        }
+    }
 }

@@ -8,7 +8,7 @@ public class Movement : MonoBehaviour
     public float jumpSpeed = 7;
     public Animator animator;
 
-    private Rigidbody2D player;
+    private Rigidbody2D self;
     private bool canJump = true;
     private float direction = 0f;
     private bool running;
@@ -16,7 +16,7 @@ public class Movement : MonoBehaviour
 	private bool attacking;
 
     void Start() {
-        player = GetComponent<Rigidbody2D>();
+        self = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
@@ -25,20 +25,20 @@ public class Movement : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         if (direction > 0f) {
             running = true;
-            player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
+            self.velocity = new Vector2(direction * movementSpeed, self.velocity.y);
             if (transform.localRotation.eulerAngles.y != 0)
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 180, transform.eulerAngles.z);
         } else if (direction < 0f) {
             running = true;
-            player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
+            self.velocity = new Vector2(direction * movementSpeed, self.velocity.y);
             if (transform.localRotation.eulerAngles.y != 180)
                 transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
         } else{
-            player.velocity = new Vector2(0, player.velocity.y);
+            self.velocity = new Vector2(0, self.velocity.y);
             running = false;
         }
 
-        if (player.velocity.y == 0) {
+        if (self.velocity.y == 0) {
             canJump = true;
             jumping = false;
         } else {
@@ -46,7 +46,7 @@ public class Movement : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && canJump) {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+            self.velocity = new Vector2(self.velocity.x, jumpSpeed);
             canJump = false;
             jumping = true;
         }
@@ -59,5 +59,19 @@ public class Movement : MonoBehaviour
         animator.SetBool("running", running);
         animator.SetBool("jumping", jumping);
 		animator.SetBool("attacking", attacking);
+    }
+
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Ground") {
+            self.gravityScale = 0f;
+            self.velocity = new Vector2(0f,0f);
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D col) {
+        
+        if (col.gameObject.tag == "Ground") {
+            self.gravityScale = 1f;
+        }
     }
 }
