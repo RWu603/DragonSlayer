@@ -64,12 +64,20 @@ public class Player2Movement : MonoBehaviour
             player.gravityScale = 0f;
             player.velocity = new Vector2(0f,0f);
         }
+
+        if (col.gameObject.tag == "Wall") {
+            movementSpeed = 0; 
+        }
     }
 
     void OnTriggerExit2D(Collider2D col) {
         
         if (col.gameObject.tag == "Ground") {
             player.gravityScale = 1f;
+        }
+
+        if (col.gameObject.tag == "Wall") {
+            movementSpeed = 5; 
         }
     }
 }

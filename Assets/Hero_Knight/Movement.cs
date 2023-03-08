@@ -66,12 +66,20 @@ public class Movement : MonoBehaviour
             self.gravityScale = 0f;
             self.velocity = new Vector2(0f,0f);
         }
+
+        if (col.gameObject.tag == "Wall") {
+            movementSpeed = 0; 
+        }
     }
 
     void OnTriggerExit2D(Collider2D col) {
         
         if (col.gameObject.tag == "Ground") {
             self.gravityScale = 1f;
+        }
+
+        if (col.gameObject.tag == "Wall") {
+            movementSpeed = 5; 
         }
     }
 }
