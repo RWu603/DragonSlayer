@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health = 10;
+    public int maxHealth = 10;
+    public GameObject healthBar;
+
+    private int health;
+    private float hpBarDiv;
+
+    void Start() {
+        health = maxHealth;
+        hpBarDiv = healthBar.transform.localScale.x / maxHealth;
+    }
+
+    public int getHP() {
+        return health;
+    }
 
     public void damage() {
-        health--;
+        if (health > 0) {
+            health--;
+            Debug.Log(hpBarDiv);
+            healthBar.transform.localScale -= new Vector3(hpBarDiv, 0, 0);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D col) {
