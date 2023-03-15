@@ -164,6 +164,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -212,6 +216,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &79592805 stripped
@@ -226,6 +234,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -274,6 +286,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &88386089 stripped
@@ -293,6 +309,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -341,6 +361,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &438824249 stripped
@@ -384,6 +408,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &511487472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511487459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5b686e350b3440a0b760c7cc8b157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackArea: {fileID: 714949577}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  attackRange: 0.5
+  attackDamage: 40
 --- !u!1001 &517252111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,6 +433,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -439,6 +485,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &517252112 stripped
@@ -453,6 +503,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -501,6 +555,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &628359058 stripped
@@ -517,8 +575,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714949577}
-  - component: {fileID: 714949579}
-  - component: {fileID: 714949578}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
@@ -534,53 +590,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714949576}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.203, y: 0.031, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 511487463}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &714949578
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714949576}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ae14a3cc220634ab77fd46fa731167, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!60 &714949579
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 714949576}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.1656245, y: 0.18008825}
-      - {x: 0.41175207, y: 0.10307469}
-      - {x: 0.16980852, y: -0.043170854}
 --- !u!1001 &807175869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -588,6 +604,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -636,6 +656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &807175870 stripped
@@ -652,7 +676,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 982651327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,6 +714,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -738,6 +766,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MudGuard (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!4 &1049334356 stripped
@@ -768,6 +800,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+--- !u!114 &1121014261
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121014252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 215cf99f8c669974cb8de061d662224a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackArea: {fileID: 1897692791}
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 128
+  attackRange: 0.5
+  attackDamage: 40
 --- !u!1001 &1174736890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1262,6 +1312,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 982651327}
     m_Modifications:
+    - target: {fileID: 1026947923631324024, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -1309,6 +1363,10 @@ PrefabInstance:
     - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
       propertyPath: m_Name
       value: MudGuard (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
@@ -1403,8 +1461,8 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!4 &1451685666 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-  m_PrefabInstance: {fileID: 1026947924364651998}
+  m_CorrespondingSourceObject: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+  m_PrefabInstance: {fileID: 2289956194860642986}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1534373714
 GameObject:
@@ -1643,8 +1701,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897692791}
-  - component: {fileID: 1897692793}
-  - component: {fileID: 1897692792}
   m_Layer: 0
   m_Name: AttackArea
   m_TagString: Untagged
@@ -1660,110 +1716,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1897692790}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.7933334, y: -0.22666678, z: 0}
+  m_LocalPosition: {x: 0.194, y: -0.143, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 0.4166667}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1121014256}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1897692792
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897692790}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04ae14a3cc220634ab77fd46fa731167, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!60 &1897692793
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1897692790}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.5, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.1656245, y: 0.18008825}
-      - {x: 0.41175207, y: 0.10307469}
-      - {x: 0.16980852, y: -0.043170854}
---- !u!1001 &1026947924364651998
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 982651327}
-    m_Modifications:
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 8.924403
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -3.8099787
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.4785438
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521126, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1026947924650521128, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
-      propertyPath: m_Name
-      value: MudGuard
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6bbe75f9e2b96bc48b94b025fbb4d563, type: 3}
 --- !u!1001 &2111087167281423725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5677,6 +5636,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db1b6b4d5550b34d92e803f83768ae2, type: 3}
+--- !u!1001 &2289956194860642986
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 982651327}
+    m_Modifications:
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.924403
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.8099787
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.4785438
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773586, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2289956194574773596, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
+      propertyPath: m_Name
+      value: MudGuard
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bacda5ed4733308429c2c754f9a1483f, type: 3}
 --- !u!1001 &3552016667580332003
 PrefabInstance:
   m_ObjectHideFlags: 0

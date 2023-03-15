@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 1026947924650521127}
   - component: {fileID: 1026947924650521124}
   - component: {fileID: 1026947924650521122}
+  - component: {fileID: 2192778937137092471}
   m_Layer: 0
   m_Name: MudGuard
   m_TagString: Enemy
@@ -192,3 +193,17 @@ CapsuleCollider2D:
   m_Offset: {x: -5.472603, y: 3.8262014}
   m_Size: {x: 0.97797775, y: 1.3694553}
   m_Direction: 0
+--- !u!114 &2192778937137092471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026947924650521128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 734d95eb5db98654eae0f880ec79ce17, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 100
+  animator: {fileID: 1026947923631324022}
