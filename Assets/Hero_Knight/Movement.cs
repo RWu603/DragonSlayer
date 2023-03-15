@@ -73,9 +73,14 @@ public class Movement : MonoBehaviour
                 animator.SetBool("jumping", jumping);
                 animator.SetBool("attacking", attacking);
                 animator.SetBool("dead", dead);
-                }
+                StartCoroutine(Die());
+            }
         }
+    }
 
+    private IEnumerator Die() {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col) {

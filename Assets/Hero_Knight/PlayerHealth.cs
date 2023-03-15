@@ -11,7 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private float hpBarDiv;
 
     void Start() {
-        health = maxHealth;
+        resetHP();
         hpBarDiv = healthBar.transform.localScale.x / maxHealth;
     }
 
@@ -19,10 +19,13 @@ public class PlayerHealth : MonoBehaviour
         return health;
     }
 
+    public void resetHP() {
+        health = maxHealth;
+    }
+
     public void damage() {
         if (health > 0) {
             health--;
-            Debug.Log(hpBarDiv);
             healthBar.transform.localScale -= new Vector3(hpBarDiv, 0, 0);
         }
     }
