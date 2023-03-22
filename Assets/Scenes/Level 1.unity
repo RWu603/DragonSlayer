@@ -840,6 +840,10 @@ PrefabInstance:
       propertyPath: player1Attack
       value: 
       objectReference: {fileID: 1121014258}
+    - target: {fileID: 511487472, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
+      propertyPath: canAttackOtherPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5524418920978949239, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
       propertyPath: jumpSoundEffect
       value: 
@@ -5920,6 +5924,10 @@ PrefabInstance:
       propertyPath: player2Attack
       value: 
       objectReference: {fileID: 511487460}
+    - target: {fileID: 1121014261, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
+      propertyPath: canAttackOtherPlayer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3552016665700080660, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
       propertyPath: m_RootOrder
       value: 0

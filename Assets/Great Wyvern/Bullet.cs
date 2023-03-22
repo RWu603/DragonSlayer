@@ -29,7 +29,7 @@ public class Bullet : MonoBehaviour
 
 
     void OnTriggerEnter2D(Collider2D col) {
-        if (col.gameObject.tag == "Player1" || col.gameObject.tag == "Player2") {
+        if (col.gameObject.tag == "Player") {
             col.gameObject.GetComponent<PlayerHealth>().damage(10);
         }
     }
