@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int maxHealth = 10;
+    public int maxHealth = 100;
     public GameObject healthBar;
+    public Player1Attack player1Attack;
+    public Attack player2Attack;
 
     private int health;
     private float hpBarDiv;
@@ -23,16 +25,16 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
     }
 
-    public void damage() {
+    public void damage(int damageToTake) {
         if (health > 0) {
-            health--;
-            healthBar.transform.localScale -= new Vector3(hpBarDiv, 0, 0);
+            health -= damageToTake;
+            healthBar.transform.localScale -= new Vector3(hpBarDiv * damageToTake, 0, 0);
         }
     }
 
     void OnTriggerEnter2D(Collider2D col) {
         if (col.gameObject.tag == "Enemy") {
-            damage();
+            damage(10);
         }
     }
 }

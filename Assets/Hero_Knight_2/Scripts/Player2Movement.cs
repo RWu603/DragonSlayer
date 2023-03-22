@@ -7,7 +7,7 @@ public class Player2Movement : MonoBehaviour
     public float movementSpeed = 5;
     public float jumpSpeed = 7;
     public Animator animator;
-
+    public PlayerHealth playerHealth;
     public Player2Attack p2Attack;
 
     private Rigidbody2D player;
@@ -15,6 +15,8 @@ public class Player2Movement : MonoBehaviour
     private float direction = 0f;
     private bool running = false;
     private bool jumping = false;
+    private bool dead = false;
+
 
     void Start() {
         player = GetComponent<Rigidbody2D>();
@@ -22,8 +24,6 @@ public class Player2Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-
         direction = Input.GetAxis("Horizontal2");
         if (direction > 0f) {
             running = true;
@@ -56,7 +56,23 @@ public class Player2Movement : MonoBehaviour
         animator.SetBool("jumping", jumping);
         animator.SetBool("running", running);
         animator.SetBool("attacking", p2Attack.attackingAnim);
-    
+
+        if (playerHealth.getHP() <= 0) {
+            player.velocity = Vector2.zero;
+            dead = true;
+            running = false;
+            jumping = false;
+            animator.SetBool("running", running);
+            animator.SetBool("jumping", jumping);
+            animator.SetBool("attacking", false);
+            animator.SetBool("dead", dead);
+            StartCoroutine(Die());
+        }
+    }
+
+    private IEnumerator Die() {
+        yield return new WaitForSeconds(1.5f);
+        gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D col) {

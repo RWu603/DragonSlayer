@@ -7,6 +7,9 @@ TagManager:
   - Enemy
   - Ground
   - Wall
+  - Player1
+  - Player2
+  - Bullet
   layers:
   - Default
   - TransparentFX
@@ -16,8 +19,8 @@ TagManager:
   - UI
   - 
   - Enemies
-  - 
-  - 
+  - Player1
+  - Player2
   - 
   - 
   - 

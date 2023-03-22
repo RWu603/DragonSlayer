@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class MudGuard : MonoBehaviour
 {
-    public int health = 3;
     [SerializeField] public float speed = 3f;
     public Animator animator;
     

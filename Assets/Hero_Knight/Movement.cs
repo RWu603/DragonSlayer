@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour
             animator.SetBool("jumping", jumping);
             animator.SetBool("attacking", attacking);
         
-            if (playerHealth.getHP() == 0) {
+            if (playerHealth.getHP() <= 0) {
                 self.velocity = Vector2.zero;
                 dead = true;
                 running = false;

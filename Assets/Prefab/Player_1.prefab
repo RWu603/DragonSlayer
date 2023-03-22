@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 691713851}
   - component: {fileID: 691713852}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1557076392}
   - component: {fileID: 1557076393}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1897692791}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2064415355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,9 +246,9 @@ GameObject:
   - component: {fileID: 3552016665700080665}
   - component: {fileID: 1121014257}
   - component: {fileID: 1121014261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player_1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,6 +307,7 @@ MonoBehaviour:
   movementSpeed: 5
   jumpSpeed: 7
   animator: {fileID: 3552016666734440861}
+  playerHealth: {fileID: 1121014257}
 --- !u!70 &3552016665700080665
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -335,8 +336,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3453eccdb9d0740a7769da7c2c47cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   healthBar: {fileID: 691713850}
+  player1Attack: {fileID: 1121014261}
+  player2Attack: {fileID: 0}
 --- !u!114 &1121014261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -353,8 +356,12 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 512
   attackRange: 0.5
   attackDamage: 40
+  canAttackOtherPlayer: 1
 --- !u!1 &3552016666734440862
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +373,7 @@ GameObject:
   - component: {fileID: 3552016666734440803}
   - component: {fileID: 3552016666734440860}
   - component: {fileID: 3552016666734440861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Idle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 294050905}
   - component: {fileID: 294050906}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 714949577}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: AttackArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -125,7 +125,7 @@ GameObject:
   m_Component:
   - component: {fileID: 873997074}
   - component: {fileID: 873997075}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -208,7 +208,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1368867485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Health Bar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -247,9 +247,9 @@ GameObject:
   - component: {fileID: 511487464}
   - component: {fileID: 511487468}
   - component: {fileID: 511487472}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -324,6 +324,7 @@ MonoBehaviour:
   movementSpeed: 5
   jumpSpeed: 7
   animator: {fileID: 5524418921364439898}
+  playerHealth: {fileID: 511487468}
   p2Attack: {fileID: 511487464}
 --- !u!114 &511487464
 MonoBehaviour:
@@ -350,8 +351,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca3453eccdb9d0740a7769da7c2c47cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 10
+  maxHealth: 100
   healthBar: {fileID: 873997073}
+  player1Attack: {fileID: 0}
+  player2Attack: {fileID: 511487472}
 --- !u!114 &511487472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -368,8 +371,12 @@ MonoBehaviour:
   enemyLayers:
     serializedVersion: 2
     m_Bits: 128
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 256
   attackRange: 0.5
   attackDamage: 40
+  canAttackOtherPlayer: 1
 --- !u!1 &5524418921364439900
 GameObject:
   m_ObjectHideFlags: 0
@@ -381,7 +388,7 @@ GameObject:
   - component: {fileID: 5524418921364439899}
   - component: {fileID: 5524418921364439897}
   - component: {fileID: 5524418921364439898}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player2Animator
   m_TagString: Untagged
   m_Icon: {fileID: 0}

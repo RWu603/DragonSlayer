@@ -167,6 +167,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5524418920978949243, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
   m_PrefabInstance: {fileID: 1174736890}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &511487460 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 511487472, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
+  m_PrefabInstance: {fileID: 1174736890}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511487459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36a5b686e350b3440a0b760c7cc8b157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &982651326
 GameObject:
   m_ObjectHideFlags: 0
@@ -207,15 +218,15 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3552016665700080662, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
   m_PrefabInstance: {fileID: 3552016667580332003}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1121014257 stripped
+--- !u!114 &1121014258 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1121014257, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1121014261, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
   m_PrefabInstance: {fileID: 3552016667580332003}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1121014252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca3453eccdb9d0740a7769da7c2c47cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 215cf99f8c669974cb8de061d662224a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1174736890
@@ -225,6 +236,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 511487468, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
+      propertyPath: player1Attack
+      value: 
+      objectReference: {fileID: 1121014258}
     - target: {fileID: 5524418920978949240, guid: 63f297bf46b1ef14aa315dcf86a2ce12, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -346,7 +361,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -93769047
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f1448fc6ff9c1d9448bb4ab7c4c3be2d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -750,7 +765,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -93769047
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 301d4848b4d18f8489701af6147ea28d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -937,7 +952,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -93769047
-  m_SortingLayer: -1
+  m_SortingLayer: -2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 301d4848b4d18f8489701af6147ea28d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5092,6 +5107,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1121014257, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
+      propertyPath: player2Attack
+      value: 
+      objectReference: {fileID: 511487460}
     - target: {fileID: 3552016665700080660, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5139,14 +5158,6 @@ PrefabInstance:
     - target: {fileID: 3552016665700080662, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
       propertyPath: m_Name
       value: Player_1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3552016665700080666, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
-      propertyPath: playerHealth
-      value: 
-      objectReference: {fileID: 1121014257}
-    - target: {fileID: 3552016666734440860, guid: a1560d2a4644d384abee039dfbba6300, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1560d2a4644d384abee039dfbba6300, type: 3}

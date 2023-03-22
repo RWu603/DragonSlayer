@@ -7,18 +7,32 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     private int nextSceneToLoad;
+    private bool canPass = false;
+
+    public Player1Attack player1Attack;
+    public Attack player2Attack;
+    public GameObject dragon;
 
     void Start()
     {
         nextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
     }
-
-    private void OnTriggerEnter2D(Collider2D collision){
-        SceneManager.LoadScene(nextSceneToLoad);
+    
+    void Update() {
+        if (!dragon) {
+            canPass = true;
+        }
     }
 
-    void Update()
-    {
-        
+    void OnTriggerEnter2D(Collider2D col) {
+        if (col.gameObject.tag == "Player") {
+            if (canPass) {
+                if (nextSceneToLoad == 3) {
+                    player1Attack.canAttackOtherPlayer = true;
+                    player2Attack.canAttackOtherPlayer = true;
+                }
+                SceneManager.LoadScene(nextSceneToLoad);
+            }
+        }
     }
 }
