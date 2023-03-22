@@ -7,8 +7,9 @@ public class Player2Movement : MonoBehaviour
     public float movementSpeed = 5;
     public float jumpSpeed = 7;
     public Animator animator;
-    public PlayerHealth playerHealth;
+
     public Player2Attack p2Attack;
+    public PlayerHealth playerHealth;
 
     private Rigidbody2D player;
     private bool canJump = true;
@@ -17,57 +18,60 @@ public class Player2Movement : MonoBehaviour
     private bool jumping = false;
     private bool dead = false;
 
-
     void Start() {
         player = GetComponent<Rigidbody2D>();
     }
     // Update is called once per frame
     void Update()
     {
-        direction = Input.GetAxis("Horizontal2");
-        if (direction > 0f) {
-            running = true;
-            player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
-            if (transform.localRotation.eulerAngles.y != 0)
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 180, transform.eulerAngles.z);
-        } else if (direction < 0f) {
-            running = true;
-            player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
-            if (transform.localRotation.eulerAngles.y != 180)
-                transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
-        } else{
-            player.velocity = new Vector2(0, player.velocity.y);
-            running = false;
-        }
+        if(!dead)
+        {
 
-        if (player.velocity.y == 0) {
-            canJump = true;
-            jumping = false;
-        }
+            direction = Input.GetAxis("Horizontal2");
+            if (direction > 0f) {
+                running = true;
+                player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
+                if (transform.localRotation.eulerAngles.y != 0)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y - 180, transform.eulerAngles.z);
+            } else if (direction < 0f) {
+                running = true;
+                player.velocity = new Vector2(direction * movementSpeed, player.velocity.y);
+                if (transform.localRotation.eulerAngles.y != 180)
+                    transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y + 180, transform.eulerAngles.z);
+            } else{
+                player.velocity = new Vector2(0, player.velocity.y);
+                running = false;
+            }
 
-        if (Input.GetKey("w") && canJump) {
-            player.velocity = new Vector2(player.velocity.x, jumpSpeed);
-            canJump = false;
-            running = false;
-            jumping = true;
-            
-        }
+            if (player.velocity.y == 0) {
+                canJump = true;
+                jumping = false;
+            }
 
-        animator.SetBool("jumping", jumping);
-        animator.SetBool("running", running);
-        animator.SetBool("attacking", p2Attack.attackingAnim);
+            if (Input.GetKey("w") && canJump) {
+                player.velocity = new Vector2(player.velocity.x, jumpSpeed);
+                canJump = false;
+                running = false;
+                jumping = true;
+                
+            }
 
-        if (playerHealth.getHP() <= 0) {
-            player.velocity = Vector2.zero;
-            dead = true;
-            running = false;
-            jumping = false;
-            animator.SetBool("running", running);
             animator.SetBool("jumping", jumping);
-            animator.SetBool("attacking", false);
-            animator.SetBool("dead", dead);
-            StartCoroutine(Die());
+            animator.SetBool("running", running);
+            animator.SetBool("attacking", p2Attack.attackingAnim);
+
+            if (playerHealth.getHP() == 0) {
+                    player.velocity = Vector2.zero;
+                    dead = true;
+                    running = false;
+                    jumping = false;
+                    animator.SetBool("running", running);
+                    animator.SetBool("jumping", jumping);
+                    animator.SetBool("dead", dead);
+                    StartCoroutine(Die());
+                }
         }
+    
     }
 
     private IEnumerator Die() {
