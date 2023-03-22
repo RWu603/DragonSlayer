@@ -18,6 +18,8 @@ public class Player2Movement : MonoBehaviour
     private bool jumping = false;
     private bool dead = false;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+
     void Start() {
         player = GetComponent<Rigidbody2D>();
     }
@@ -49,6 +51,7 @@ public class Player2Movement : MonoBehaviour
             }
 
             if (Input.GetKey("w") && canJump) {
+                jumpSoundEffect.Play();
                 player.velocity = new Vector2(player.velocity.x, jumpSpeed);
                 canJump = false;
                 running = false;

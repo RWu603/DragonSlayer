@@ -17,6 +17,10 @@ public class Movement : MonoBehaviour
 	private bool attacking;
     private bool dead = false;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource attackSoundEffect;
+
+
     void Start() {
         self = GetComponent<Rigidbody2D>();
     }
@@ -49,12 +53,14 @@ public class Movement : MonoBehaviour
             }
 
             if (Input.GetKey(KeyCode.UpArrow) && canJump) {
+                jumpSoundEffect.Play();
                 self.velocity = new Vector2(self.velocity.x, jumpSpeed);
                 canJump = false;
                 jumping = true;
             }
             
             if (Input.GetKey(KeyCode.M) && !attacking) {
+                attackSoundEffect.Play();
                 Debug.Log("attacking");
                 attacking = true;
             }
